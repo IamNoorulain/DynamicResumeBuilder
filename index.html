@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Resume Builder</h2>
+            <form id="resumeForm">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone" required>
+                
+                <h3>Education</h3>
+                <input type="text" id="degree" placeholder="Degree" required>
+                <input type="text" id="school" placeholder="School" required>
+                <input type="text" id="eduYear" placeholder="Year" required>
+                
+                <h3>Experience</h3>
+                <input type="text" id="jobTitle" placeholder="Job Title" required>
+                <input type="text" id="company" placeholder="Company" required>
+                <input type="text" id="expYear" placeholder="Year" required>
+                <textarea id="responsibilities" placeholder="Responsibilities (comma-separated)" required></textarea>
+                
+                <h3>Skills</h3>
+                <textarea id="skills" placeholder="Skills (comma-separated)" required></textarea>
+                
+                <button type="submit">Generate Resume</button>
+            </form>
+        </div>
+        
+        <div class="resume-container">
+            <div id="resume">
+                <header>
+                    <h1 id="resumeName"></h1>
+                    <p id="resumeTitle"></p>
+                </header>
+                
+                <section class="contact">
+                    <h2>Contact</h2>
+                    <p id="resumeEmail"></p>
+                    <p id="resumePhone"></p>
+                </section>
+                
+                <section class="education">
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <h3 id="resumeDegree"></h3>
+                        <p id="resumeSchool"></p>
+                        <p id="resumeEduYear"></p>
+                    </div>
+                </section>
+                
+                <section class="experience">
+                    <h2>Work Experience</h2>
+                    <div class="job">
+                        <h3 id="resumeJobTitle"></h3>
+                        <p id="resumeCompany"></p>
+                        <p id="resumeExpYear"></p>
+                        <ul id="resumeResponsibilities"></ul>
+                    </div>
+                </section>
+                
+                <section class="skills">
+                    <h2>Skills</h2>
+                    <ul id="resumeSkills"></ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
